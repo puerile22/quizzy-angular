@@ -1,4 +1,4 @@
-app.controller('QuizMenuController',['$scope', 'Quiz', 'Question', function($scope, Quiz, Question) {
+app.controller('QuizMenuController',['$scope','$timeout', 'Quiz', 'Question', function($scope, $timeout, Quiz, Question) {
   $scope.quizViewAll = true;
   $scope.questionView = false;
   $scope.scoreView = false;
@@ -26,7 +26,7 @@ app.controller('QuizMenuController',['$scope', 'Quiz', 'Question', function($sco
       } else {
         $('.question').append('<h2>Incorrect!</h2>');
       }
-      setTimeout(function() {
+      $timeout(function() {
         $('.question').find('h2').remove();
         $scope.question = $scope.questions[++$scope.currentQuestion];
         console.log($scope.question);
