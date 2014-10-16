@@ -1,11 +1,16 @@
 <div ng-app='quizzy'>
   <div ng-controller='QuizMenuController'>
-    <div ng-show='quizViewAll'>
+    <div ng-show='quizViewAll' class='quizzes'>
     <a href='' ng-repeat='quiz in quizzes' ng-click='selectQuiz(quiz)'><h3 id='{{quiz.id}}'>{{quiz.title}}</h3></a>
     </div>
-    <div ng-show='questionView'>
+    <div ng-show='questionView' class='question'>
+    <h3>{{question.question}}</h3>
+    <div ng-repeat='choice in question.choices'>
+      <input type='radio' name='choice' value='{{choice}}'>{{choice}}<br/>
     </div>
-    <div ng-show='scoreView'>
+    <button type='button' ng-click='answerQuestion()'>Submit!</button>
+    </div>
+    <div ng-show='scoreView' class='score'>
     </div>
   </div>
 </div> 

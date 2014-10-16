@@ -3,5 +3,5 @@ app.factory('Quiz',function($resource) {
     '/quizzes/:id',
     {id:'@id'},
     {update:{method:'PATCH'}}
-    );
+  );
 });
