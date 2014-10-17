@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require turbolinks
 //= require underscore
 //= require angular
@@ -19,4 +20,5 @@
 //= require angular/app.js
 //= require_tree ./angular/models
 //= require_tree ./angular/controllers 
-// Your Quizzy code should go here.
+
+$(function(){ $(document).foundation(); });

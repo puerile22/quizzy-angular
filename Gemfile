@@ -34,6 +34,7 @@ group :doc do
 end
 gem 'angularjs-rails'
 gem 'pry-byebug'
+gem 'foundation-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
